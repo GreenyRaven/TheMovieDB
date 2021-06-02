@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PincodeInputPanelViewController" customModule="TheMovieDB" customModuleProvider="target">
+            <connections>
+                <outlet property="errorLabel" destination="CxW-gg-LEH" id="lp2-Um-qKh"/>
+                <outlet property="logOutButton" destination="F2E-eV-nqb" id="MLl-Mn-4bD"/>
+                <outlet property="pinsView" destination="oTK-1x-4fA" id="QBI-o1-1Y1"/>
+                <outlet property="undoOrBiometricsButton" destination="hEt-aW-q47" id="gIM-4c-1zP"/>
+                <outlet property="view" destination="6c8-FY-HmG" id="twd-L8-SxS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="dark" id="6c8-FY-HmG">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="368"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j2j-i5-YEG">
+                    <rect key="frame" x="0.0" y="0.0" width="216" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTK-1x-4fA">
+                            <rect key="frame" x="80" y="0.0" width="56" height="8"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="EzN-6r-GdR"/>
+                                <constraint firstAttribute="height" constant="8" id="cex-cr-t4f"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный пин-код" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-gg-LEH">
+                            <rect key="frame" x="36" y="24" width="144" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="K0l-ih-YJb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" name="red"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2E-eV-nqb">
+                    <rect key="frame" x="0.0" y="296" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Выйти">
+                        <color key="titleColor" name="gray"/>
+                    </state>
+                    <connections>
+                        <action selector="requestLogOut:" destination="-1" eventType="touchUpInside" id="XQK-n8-Hyx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-gE-oIG" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="224" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="7">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="CCH-3h-KvH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-Pg-tZh" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="72" y="224" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="8">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="voJ-8Q-545"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eq3-0m-tLY" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="144" y="224" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="9">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="EgE-zk-79e"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmr-Jk-7GM" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="72" y="296" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="0">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="pbZ-ny-5Q4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uei-C4-4JY" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="72" y="80" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="2">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="0es-Sk-c8v"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-E4-Wck" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="144" y="80" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="3">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="cW7-dD-YAF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qc-kd-vzb" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="152" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="4">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="bRB-An-yRE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRp-mt-UZ3" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="72" y="152" width="72" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="TWi-dc-4ID"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="xW7-Dk-5Hq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="5">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="Yrh-ut-KEd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T05-An-Osx" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="144" y="152" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="6">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="aAj-Fg-pSI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-aW-q47">
+                    <rect key="frame" x="144" y="296" width="72" height="72"/>
+                    <state key="normal" image="backspace"/>
+                    <connections>
+                        <action selector="undoOrRequestBiometrics:" destination="-1" eventType="touchUpInside" id="8Ds-US-eoZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqL-y2-y4e" customClass="PincodeButton" customModule="TheMovieDB" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="80" width="72" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="1">
+                        <color key="titleColor" name="light"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnNumber:" destination="-1" eventType="touchUpInside" id="gl2-Gc-9mu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="bg_black"/>
+            <constraints>
+                <constraint firstItem="DBN-gE-oIG" firstAttribute="top" secondItem="9qc-kd-vzb" secondAttribute="bottom" id="0OC-jr-cDG"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="Jmr-Jk-7GM" secondAttribute="height" id="41g-ZH-CWu"/>
+                <constraint firstAttribute="trailing" secondItem="1bx-E4-Wck" secondAttribute="trailing" id="8kw-mA-U9B"/>
+                <constraint firstItem="LqL-y2-y4e" firstAttribute="leading" secondItem="6c8-FY-HmG" secondAttribute="leading" id="CVK-yo-Xvt"/>
+                <constraint firstItem="WvV-Pg-tZh" firstAttribute="top" secondItem="BRp-mt-UZ3" secondAttribute="bottom" id="EHH-zU-33D"/>
+                <constraint firstItem="hEt-aW-q47" firstAttribute="top" secondItem="Eq3-0m-tLY" secondAttribute="bottom" id="EkQ-g9-1eT"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="hEt-aW-q47" secondAttribute="height" id="EsF-Tw-pP1"/>
+                <constraint firstItem="T05-An-Osx" firstAttribute="leading" secondItem="BRp-mt-UZ3" secondAttribute="trailing" id="Eu7-9s-Hl8"/>
+                <constraint firstItem="F2E-eV-nqb" firstAttribute="top" secondItem="DBN-gE-oIG" secondAttribute="bottom" id="GQv-9f-spc"/>
+                <constraint firstItem="T05-An-Osx" firstAttribute="top" secondItem="1bx-E4-Wck" secondAttribute="bottom" id="GUo-Zl-9O6"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="leading" secondItem="9qc-kd-vzb" secondAttribute="trailing" id="GXq-03-0vJ"/>
+                <constraint firstAttribute="bottom" secondItem="F2E-eV-nqb" secondAttribute="bottom" id="HW4-OT-hYx"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="9qc-kd-vzb" secondAttribute="width" id="Ica-sE-4vc"/>
+                <constraint firstItem="j2j-i5-YEG" firstAttribute="top" secondItem="6c8-FY-HmG" secondAttribute="top" id="IvP-p1-yyB"/>
+                <constraint firstItem="uei-C4-4JY" firstAttribute="top" secondItem="j2j-i5-YEG" secondAttribute="bottom" constant="36" id="Ivu-Yk-Md6"/>
+                <constraint firstAttribute="bottom" secondItem="hEt-aW-q47" secondAttribute="bottom" id="J8K-EP-SwW"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="Jmr-Jk-7GM" secondAttribute="width" id="MbC-Ys-h3E"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="DBN-gE-oIG" secondAttribute="width" id="Nut-d3-mi9"/>
+                <constraint firstItem="hEt-aW-q47" firstAttribute="top" secondItem="Eq3-0m-tLY" secondAttribute="bottom" id="PBV-Hl-aIo"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="Eq3-0m-tLY" secondAttribute="height" id="PoR-Zj-0CY"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="uei-C4-4JY" secondAttribute="height" id="Q0c-EU-Uql"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="Eq3-0m-tLY" secondAttribute="width" id="RDp-yl-y6w"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="LqL-y2-y4e" secondAttribute="height" id="SOT-kg-vNI"/>
+                <constraint firstItem="F2E-eV-nqb" firstAttribute="top" secondItem="DBN-gE-oIG" secondAttribute="bottom" id="Scv-S0-hrL"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="9qc-kd-vzb" secondAttribute="height" id="SjH-gr-hLz"/>
+                <constraint firstItem="9qc-kd-vzb" firstAttribute="top" secondItem="LqL-y2-y4e" secondAttribute="bottom" id="ThF-kE-VLx"/>
+                <constraint firstAttribute="bottom" secondItem="Jmr-Jk-7GM" secondAttribute="bottom" id="UWl-6b-kSD"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="hEt-aW-q47" secondAttribute="width" id="Ujg-v9-RZM"/>
+                <constraint firstAttribute="trailing" secondItem="j2j-i5-YEG" secondAttribute="trailing" id="VSE-p6-Fva"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="WvV-Pg-tZh" secondAttribute="height" id="Xag-Dh-mbi"/>
+                <constraint firstItem="WvV-Pg-tZh" firstAttribute="leading" secondItem="DBN-gE-oIG" secondAttribute="trailing" id="awd-lt-p0L"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="top" secondItem="uei-C4-4JY" secondAttribute="bottom" id="bb1-X9-o9O"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="WvV-Pg-tZh" secondAttribute="width" id="beZ-ho-Z2o"/>
+                <constraint firstItem="j2j-i5-YEG" firstAttribute="leading" secondItem="6c8-FY-HmG" secondAttribute="leading" id="cFW-0C-PZa"/>
+                <constraint firstItem="Eq3-0m-tLY" firstAttribute="top" secondItem="T05-An-Osx" secondAttribute="bottom" id="dTU-ub-lWX"/>
+                <constraint firstItem="uei-C4-4JY" firstAttribute="leading" secondItem="LqL-y2-y4e" secondAttribute="trailing" id="eHa-EY-fOG"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="leading" secondItem="9qc-kd-vzb" secondAttribute="trailing" id="fKP-Ui-JYL"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="F2E-eV-nqb" secondAttribute="width" id="ghg-I9-b7u"/>
+                <constraint firstItem="Jmr-Jk-7GM" firstAttribute="leading" secondItem="F2E-eV-nqb" secondAttribute="trailing" id="hwU-rH-dxu"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="LqL-y2-y4e" secondAttribute="width" id="i1X-Gy-OcE"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="1bx-E4-Wck" secondAttribute="width" id="jdU-pN-VcT"/>
+                <constraint firstItem="9qc-kd-vzb" firstAttribute="top" secondItem="LqL-y2-y4e" secondAttribute="bottom" id="jdX-xW-zP3"/>
+                <constraint firstItem="Eq3-0m-tLY" firstAttribute="leading" secondItem="WvV-Pg-tZh" secondAttribute="trailing" id="kCn-TC-ySo"/>
+                <constraint firstItem="hEt-aW-q47" firstAttribute="leading" secondItem="Jmr-Jk-7GM" secondAttribute="trailing" id="kpT-Wo-H1g"/>
+                <constraint firstItem="DBN-gE-oIG" firstAttribute="top" secondItem="9qc-kd-vzb" secondAttribute="bottom" id="nRc-K3-Nnr"/>
+                <constraint firstItem="F2E-eV-nqb" firstAttribute="leading" secondItem="6c8-FY-HmG" secondAttribute="leading" id="nya-KU-6Yc"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="F2E-eV-nqb" secondAttribute="height" id="nzw-2b-N4B"/>
+                <constraint firstItem="Eq3-0m-tLY" firstAttribute="top" secondItem="T05-An-Osx" secondAttribute="bottom" id="oMP-0A-k2G"/>
+                <constraint firstItem="9qc-kd-vzb" firstAttribute="leading" secondItem="6c8-FY-HmG" secondAttribute="leading" id="oTT-T8-5Lw"/>
+                <constraint firstItem="DBN-gE-oIG" firstAttribute="leading" secondItem="6c8-FY-HmG" secondAttribute="leading" id="pX8-Yf-x9l"/>
+                <constraint firstItem="Jmr-Jk-7GM" firstAttribute="leading" secondItem="F2E-eV-nqb" secondAttribute="trailing" id="paI-lu-Iql"/>
+                <constraint firstItem="Jmr-Jk-7GM" firstAttribute="top" secondItem="WvV-Pg-tZh" secondAttribute="bottom" id="q20-3f-D88"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="DBN-gE-oIG" secondAttribute="height" id="q5L-KR-oRt"/>
+                <constraint firstAttribute="trailing" secondItem="T05-An-Osx" secondAttribute="trailing" id="qew-8X-dT1"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="T05-An-Osx" secondAttribute="height" id="qyq-13-UwG"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="uei-C4-4JY" secondAttribute="width" id="sfc-7s-8Ck"/>
+                <constraint firstItem="1bx-E4-Wck" firstAttribute="leading" secondItem="uei-C4-4JY" secondAttribute="trailing" id="soy-ks-dVv"/>
+                <constraint firstItem="hEt-aW-q47" firstAttribute="leading" secondItem="Jmr-Jk-7GM" secondAttribute="trailing" id="tMm-L9-L7g"/>
+                <constraint firstItem="T05-An-Osx" firstAttribute="leading" secondItem="BRp-mt-UZ3" secondAttribute="trailing" id="uKA-Wc-opa"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="height" secondItem="1bx-E4-Wck" secondAttribute="height" id="v6x-mR-OPI"/>
+                <constraint firstItem="BRp-mt-UZ3" firstAttribute="width" secondItem="T05-An-Osx" secondAttribute="width" id="wJt-6m-K0Y"/>
+                <constraint firstAttribute="trailing" secondItem="hEt-aW-q47" secondAttribute="trailing" id="wbH-jP-4cv"/>
+                <constraint firstAttribute="trailing" secondItem="Eq3-0m-tLY" secondAttribute="trailing" id="whd-rS-w9Y"/>
+                <constraint firstItem="T05-An-Osx" firstAttribute="top" secondItem="1bx-E4-Wck" secondAttribute="bottom" id="yFs-Oa-kpF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-415.94202898550731" y="-227.00892857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backspace" width="24" height="24"/>
+        <namedColor name="bg_black">
+            <color red="0.097999997437000275" green="0.10300000011920929" blue="0.14599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.39500001072883606" green="0.42699998617172241" blue="0.54199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="light">
+            <color red="0.90399998426437378" green="0.9309999942779541" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red">
+            <color red="0.88300001621246338" green="0.087999999523162842" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

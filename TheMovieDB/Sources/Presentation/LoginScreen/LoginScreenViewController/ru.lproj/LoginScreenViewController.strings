@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Войти"; ObjectID = "87W-am-aoF"; */
+"87W-am-aoF.normalTitle" = "Войти";
+
+/* Class = "UITextField"; placeholder = "Логин"; ObjectID = "EvT-cf-lfL"; */
+"EvT-cf-lfL.placeholder" = "Логин";
+
+/* Class = "UITextField"; placeholder = "Пароль"; ObjectID = "l5F-BM-1Ea"; */
+"l5F-BM-1Ea.placeholder" = "Пароль";
+
+/* Class = "UITextView"; text = "Укажите логин и пароль, которые  вы использовали для входа"; ObjectID = "mu9-eJ-W8I"; */
+"mu9-eJ-W8I.text" = "Укажите логин и пароль, которые  вы использовали для входа";

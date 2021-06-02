@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="fmd-YU-R0n" customClass="PinsView" customModule="TheMovieDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="56" height="8"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0H-xY-L2U">
+                    <rect key="frame" x="0.0" y="0.0" width="56" height="8"/>
+                    <subviews>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4k-W6-2JA" customClass="UIImageView">
+                            <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="8" id="3GE-YL-Ipv"/>
+                                <constraint firstAttribute="width" constant="8" id="a7f-ln-0cf"/>
+                            </constraints>
+                        </view>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fua-i6-bff" customClass="UIImageView">
+                            <rect key="frame" x="16" y="0.0" width="8" height="8"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="8" id="PHZ-Wc-oas"/>
+                                <constraint firstAttribute="width" constant="8" id="nIb-C7-ngK"/>
+                            </constraints>
+                        </view>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vg3-1c-QUn" customClass="UIImageView">
+                            <rect key="frame" x="32" y="0.0" width="8" height="8"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="8" id="CFx-0z-nIc"/>
+                                <constraint firstAttribute="height" constant="8" id="cF3-Y4-6zg"/>
+                            </constraints>
+                        </view>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlw-sy-AkS" customClass="UIImageView">
+                            <rect key="frame" x="48" y="0.0" width="8" height="8"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="8" id="3Nd-nO-sGm"/>
+                                <constraint firstAttribute="height" constant="8" id="gR0-3z-NBI"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="bg_black"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="f0H-xY-L2U" secondAttribute="trailing" id="TC5-aL-5cT"/>
+                <constraint firstItem="f0H-xY-L2U" firstAttribute="leading" secondItem="fmd-YU-R0n" secondAttribute="leading" id="XgH-ad-7HO"/>
+                <constraint firstAttribute="height" constant="8" id="sL7-C2-yvb"/>
+                <constraint firstAttribute="bottom" secondItem="f0H-xY-L2U" secondAttribute="bottom" id="sqe-fU-uI7"/>
+                <constraint firstItem="f0H-xY-L2U" firstAttribute="top" secondItem="fmd-YU-R0n" secondAttribute="top" id="zXj-LM-RH0"/>
+                <constraint firstAttribute="width" constant="56" id="zqX-xK-6qH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="firstPin" destination="V4k-W6-2JA" id="1lE-u7-nGX"/>
+                <outlet property="forthPin" destination="Jlw-sy-AkS" id="YQk-yN-Sev"/>
+                <outlet property="secondPin" destination="Fua-i6-bff" id="SGf-f4-W7T"/>
+                <outlet property="thirdPin" destination="Vg3-1c-QUn" id="gfj-o7-clM"/>
+            </connections>
+            <point key="canvasLocation" x="-304" y="-295"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="bg_black">
+            <color red="0.097999997437000275" green="0.10300000011920929" blue="0.14599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
