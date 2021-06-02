@@ -3,7 +3,7 @@
 //  TheMovieDB
 //
 //  Created by Павел Духовенко on 07.05.2021.
-//  Copyright © 2020 RedMadRobot. All rights reserved.
+//  
 
 
 import UIKit

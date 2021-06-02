@@ -40,7 +40,7 @@ final class PersistentStoreServiceImpl: PersistentStoreService {
     // MARK: - Constants
     
     private enum Constants {
-        static let serviceName = "com.redmadrobot.TheMovieDB"
+        static let serviceName = "com.GreenyRaven.TheMovieDB"
     }
     
     // MARK: - Private properties
